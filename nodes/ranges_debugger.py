@@ -17,7 +17,7 @@ class RangesDebugger(Node):
         )
 
         self.ranges_debug_pub = self.create_publisher(
-            msg_type=Float32MultiArray, topic='debug', qos_profile=1
+            msg_type=Float32MultiArray, topic='~/debug', qos_profile=1
         )
         self.ranges_sub = self.create_subscription(
             msg_type=RangeMeasurementArray,
