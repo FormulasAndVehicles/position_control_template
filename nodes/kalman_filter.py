@@ -48,7 +48,7 @@ class PositionKalmanFilter(Node):
         # dimension: num states x num states
         # matrix needs to be positive definite and symmetric
         self.process_noise_position_stddev = 0.1
-        self.Q = (self.range_noise_stddev**2) * np.eye(self.num_states)
+        self.Q = (self.process_noise_position_stddev**2) * np.eye(self.num_states)
 
         # measurement noise covariance - how much noise does the measurement
         # contain?
